@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { Button } from 'semantic-ui-react'
+
 
 const Movie = (props) => {
   const [movie, setMovie] = useState();
@@ -51,6 +53,7 @@ const Movie = (props) => {
         ))}
       </div>
       <div onClick={() => props.addToSavedList(movie)} className="save-button">Save</div>
+      <Button onClick={props.clearSavedList}>Clear Saved List</Button>
     </div>
   );
 }
